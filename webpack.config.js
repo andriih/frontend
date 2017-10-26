@@ -10,8 +10,11 @@ module.exports = {
     entry: './src/js/index.js',
     output: {
       filename: 'bundle.js',
-      path: path.resolve(__dirname,'dist'),
-      publicPath: '/dist'
+      path: path.resolve(__dirname,'dist')
+    },
+    devtool: 'source-map',
+    devServer:{
+        contentBase: 'dist'
     },
     module: {
         rules: [
